@@ -3,7 +3,8 @@ let btnYes=document.querySelector(".yes")
 let button=document.querySelector("button")
 let img=document.querySelector("img")
 let h1=document.querySelector("h1")
-let counter=0;
+let counterOfBtn=0;
+
 let listOfMoving=[
     {
         transelateX:"50px",
@@ -30,7 +31,7 @@ let listOfMoving=[
 console.log(btnYes)
 console.log(btnNo)
 function dateFunction(counter){
-btnNo.onclick=()=>{
+btnNo.onmouseenter=()=>{
     if(counter==listOfMoving.length){
         btnNo.style.display="none"
     }else{
@@ -40,13 +41,18 @@ btnNo.onclick=()=>{
         // ;
         dateFunction(counter=counter+1)
     }
-
+    counterOfBtn=counter
 }
     console.log(counter)
 }
 dateFunction(0)
 btnYes.onclick=()=>{
-    h1.innerHTML="so we will go when i tell you ❤️"
+    if(counterOfBtn==0){
+        btnNo.style.display="none"
+    }
+    console.log(counterOfBtn)
+    console.log(h1)
+    h1.innerHTML="so we will go soon❤️"
     btnYes.style.display="none"
     img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeq__ZOiiiPQhCGsGO9S47co2jY4gpfOC_7P2ZBnZDMQ&s=10"
 }
