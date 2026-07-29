@@ -29,12 +29,6 @@ let listOfMoving=[
         transelateY:"-30px",
         src:"https://media1.tenor.com/m/9MFCL1k1gacAAAAd/cat-crying.gif",
     },
-    {
-        h1Text:"",
-        transelateX:"40px",
-        transelateY:"180px",
-        src:"https://media1.tenor.com/m/0CCfwdtA4T4AAAAd/bubu-dudu-dudu.gif",
-    },
 ]
 console.log(btnYes)
 console.log(btnNo)
