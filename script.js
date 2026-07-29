@@ -3,29 +3,37 @@ let btnYes=document.querySelector(".yes")
 let button=document.querySelector("button")
 let img=document.querySelector("img")
 let h1=document.querySelector("h1")
-let counterOfBtn=0;
-
+let counter=0;
 let listOfMoving=[
     {
+        h1Text:"Wait... are you sure? 😮",
         transelateX:"50px",
         transelateY:"75px",
-
+        src:"https://media.tenor.com/KJ-ArgsmXwgAAAAj/milk-mocha-confused-milk-mocha-bear.gif",
     },
     {
+        h1Text:"Please think about it again! 🥺",
         transelateX:"-50px",
         transelateY:"-50px",
+        src:"goma-sad.gif",
     },
     {
+        h1Text:"Hey! That's not fair! 😤",
         transelateX:"80px",
         transelateY:"100px",
+        src:"https://media1.tenor.com/m/CDNXg0h92fMAAAAd/heh-huh.gif",
     },
     {
+        h1Text:"Look at these tears, please don't do this! 😭",
         transelateX:"40px",
         transelateY:"-30px",
+        src:"https://media1.tenor.com/m/9MFCL1k1gacAAAAd/cat-crying.gif",
     },
     {
+        h1Text:"",
         transelateX:"40px",
         transelateY:"180px",
+        src:"https://media1.tenor.com/m/0CCfwdtA4T4AAAAd/bubu-dudu-dudu.gif",
     },
 ]
 console.log(btnYes)
@@ -34,25 +42,23 @@ function dateFunction(counter){
 btnNo.onclick=()=>{
     if(counter==listOfMoving.length){
         btnNo.style.display="none"
+        h1.innerHTML="Okay, that's it! Now you have no choice! 😈"
+        img.src="https://media.tenor.com/wGMzikyMbeEAAAAj/flower-for-you-cat.gif"
     }else{
         
         button.style.cssText
         btnNo.style.cssText=`transform: translate(${listOfMoving[counter].transelateX},${listOfMoving[counter].transelateY})`
-        // ;
+        img.src=listOfMoving[counter].src
+        h1.innerHTML=listOfMoving[counter].h1Text        
         dateFunction(counter=counter+1)
     }
-    counterOfBtn=counter
+
 }
     console.log(counter)
 }
 dateFunction(0)
 btnYes.onclick=()=>{
-    if(counterOfBtn==0){
-        btnNo.style.display="none"
-    }
-    console.log(counterOfBtn)
-    console.log(h1)
-    h1.innerHTML="so we will go soon❤️"
+    h1.innerHTML="Yay! I knew you'd say yes! See you soon! ❤️🍹"
     btnYes.style.display="none"
-    img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeq__ZOiiiPQhCGsGO9S47co2jY4gpfOC_7P2ZBnZDMQ&s=10"
+    img.src="http://reactiongifs.me/cdn-cgi/imagedelivery/S36QsAbHn6yI9seDZ7V8aA/cf509b15-338c-427e-526f-06f16a827500/w=200,h=354"
 }
