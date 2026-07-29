@@ -31,7 +31,7 @@ let listOfMoving=[
 console.log(btnYes)
 console.log(btnNo)
 function dateFunction(counter){
-btnNo.onmouseenter=()=>{
+btnNo.onclick=()=>{
     if(counter==listOfMoving.length){
         btnNo.style.display="none"
     }else{
