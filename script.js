@@ -54,5 +54,6 @@ dateFunction(0)
 btnYes.onclick=()=>{
     h1.innerHTML="Yay! I knew you'd say yes! See you soon! ❤️🍹"
     btnYes.style.display="none"
+    btnNo.style.display="none"
     img.src="http://reactiongifs.me/cdn-cgi/imagedelivery/S36QsAbHn6yI9seDZ7V8aA/cf509b15-338c-427e-526f-06f16a827500/w=200,h=354"
 }
